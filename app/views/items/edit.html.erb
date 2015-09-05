@@ -1,0 +1,31 @@
+<h1>商品編集フォーム</h1>
+<%= form_for @item, url:{action: :update} do |f| %>
+
+<p>
+  <%= f.label '商品名' %>
+  <%= f.text_field :item_name %>
+</p>
+<p>
+  <%= f.label '商品情報' %>
+  <%= f.text_area :item_info %>
+</p>
+<p>
+  <%= f.label '価格' %>
+  <%= f.text_field :price %>
+</p>
+<p>
+  <%= f.label '売り手ＩＤ' %>
+  <%= f.text_field :seller_id %>
+</p>
+<p>
+  <%= f.label 'メールアドレス' %>
+  <%= f.text_field :email %>
+</p>
+<p>
+  <%= f.label '画像URL' %>
+  <%= f.text_area :img_url %>
+</p>
+
+<%= f.submit '更新' %>
+
+  <% end %>

@@ -1,8 +1,10 @@
 <h1>出品一覧</h1>
 <% @items.each do |item| %>
 <li>
-  <a href="<%= item.id %>">
+  <a href="/items/<%= item.id %>">
   <%= item.item_name %>
   </a>
 </li>
 <% end %>
+
+<%= link_to '新規登録', new_item_path %>

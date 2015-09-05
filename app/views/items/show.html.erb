@@ -1,11 +1,11 @@
-
+<p>
   <strong>商品名：<%= @item.item_name %></strong>
 </p>
 <p>
   <strong>商品詳細：<%= @item.item_info %></strong>
 </p>
 <p>
-  <strong>価格：<%= @itemprice %></strong>
+  <strong>価格：<%= @item.price %></strong>
 </p>
 <p>
   <strong>売り手ID：<%= @item.seller_id %></strong>
@@ -14,3 +14,6 @@
   <strong>メールアドレス：<%= @item.email %></strong>
 </p>
 <P><%= image_tag(@item.img_url) %></P>
+<%= link_to '編集', edit_item_path %>
+<%= link_to '削除', items_path, methd: :delete %>
+<%= link_to '戻る', items_path %>
