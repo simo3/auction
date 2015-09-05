@@ -15,5 +15,5 @@
 </p>
 <P><%= image_tag(@item.img_url) %></P>
 <%= link_to '編集', edit_item_path %>
-<%= link_to '削除', items_path, methd: :delete %>
+<%= link_to '削除', item_path, method: "delete" %>
 <%= link_to '戻る', items_path %>

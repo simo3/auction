@@ -29,10 +29,10 @@ def update
 end
 
 def destroy
-  @item.destroy(item_params)
-
+  @item = Item.find(params[:id])
+  @item.destroy
+  @item.save
   redirect_to "/items"
-
 end
 
 private
