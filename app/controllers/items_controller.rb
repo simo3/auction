@@ -25,14 +25,14 @@ def update
   @item = Item.find(params[:id])
   @item.update_attributes(item_params)
   @item.save
-  redirect_to "/items/#{@item.id}"
+  redirect_to item_url(@item)
 end
 
 def destroy
   @item = Item.find(params[:id])
   @item.destroy
   @item.save
-  redirect_to "/items"
+  redirect_to items_url(@item)
 end
 
 private
